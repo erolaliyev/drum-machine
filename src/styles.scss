@@ -3,12 +3,16 @@
 
 html {
   font-size: 62.5%;
+  height: 100%;
 }
 
 body {
   background-image: url(./images/background.jpg);
   background-size: cover;
+  background-repeat: no-repeat;
   font-family: 'Merienda', cursive;
+  height: 100%;
+  overflow: hidden;
 }
 
 pre {

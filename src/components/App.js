@@ -59,13 +59,13 @@ export default class DrumMachine extends React.Component {
   }
 
   handleClick(e) {
-    e.target.querySelector('audio').play();
     const letter = e.target.textContent;
     const tune = assets.find(tune => tune.letter === letter);
     if (this.state.text !== tune.text) {
       this.setState({ text: tune.text });
     }
     e.persist();
+    e.target.querySelector('audio').play();
     e.target.classList.add('active');
     const removeActiveClass = () => e.target.classList.remove('active');
     setTimeout(removeActiveClass, 200);
@@ -75,13 +75,13 @@ export default class DrumMachine extends React.Component {
       tune => tune.letter === e.key || tune.letter.toLowerCase() === e.key
     );
     if (tune) {
-      document.getElementById(tune.letter).play();
+      document.querySelectorAll(`#${tune.letter}`)[1].play();
       if (this.state.text !== tune.text) {
         this.setState({ text: tune.text });
       }
-      document.querySelector(`.${tune.letter}`).classList.add('active');
+      document.querySelector(`#${tune.letter}`).classList.add('active');
       const removeActiveClass = () =>
-        document.querySelector(`.${tune.letter}`).classList.remove('active');
+        document.querySelector(`#${tune.letter}`).classList.remove('active');
       setTimeout(removeActiveClass, 200);
     }
   }
@@ -95,7 +95,7 @@ export default class DrumMachine extends React.Component {
     return (
       <div id='drum-machine'>
         <p id='display'>{this.state.text}</p>
-        <div>
+        <div id='drum-pads-container'>
           {assets.map(e => (
             <DrumPad
               key={e.letter}
