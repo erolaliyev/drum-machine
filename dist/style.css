@@ -1,0 +1,9 @@
+#drum-machine,
+#drum-machine,#drum-pads-container,
+#drum-pads-container,
+#display,
+.drum-pad,
+.active,
+html,
+body,
+pre {margin:0;padding:0}#drum-machine{-webkit-box-orient:vertical;flex-flow:column nowrap;margin:15% auto}#drum-machine,#drum-pads-container{display:-webkit-box;display:flex;-webkit-box-direction:normal}#drum-pads-container{-webkit-box-orient:horizontal;flex-flow:row wrap;-webkit-box-pack:space-evenly;justify-content:space-evenly;width:100%}#display{font-size:5rem;margin:5% auto}@media (min-width:1024px){#drum-machine{margin-top:5%}}.drum-pad{display:-webkit-box;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;flex-flow:row nowrap;-webkit-box-pack:center;justify-content:center;-webkit-box-align:center;align-items:center;border:.3rem solid #000;cursor:pointer;font-size:2rem;margin:2% 0;width:30%;height:11%;-webkit-transition:all .1s ease-in;transition:all .1s ease-in}.active{background-color:#ff0;-webkit-transform:scale(1.1);transform:scale(1.1)}@media (min-width:768px){.drum-pad{width:8%;height:5%}}@media (min-width:1024px){.drum-pad{height:10%}}html{font-size:62.5%}body{background-image:url(images/1e6cb6a7fdceb1e477d1384023963742.jpg);background-size:cover;font-family:Merienda,cursive}pre{display:none}

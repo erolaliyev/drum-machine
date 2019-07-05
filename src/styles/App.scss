@@ -1,0 +1,23 @@
+#drum-machine {
+  display: flex;
+  flex-flow: column nowrap;
+  margin: 15% auto;
+}
+
+#drum-pads-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+#display {
+  font-size: 5rem;
+  margin: 5% auto;
+}
+
+@media (min-width: 1024px) {
+  #drum-machine {
+    margin-top: 5%;
+  }
+}

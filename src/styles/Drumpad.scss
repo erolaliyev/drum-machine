@@ -1,0 +1,31 @@
+.drum-pad {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  border: 0.3rem black solid;
+  cursor: pointer;
+  font-size: 2rem;
+  margin: 2% 0;
+  width: 30%;
+  height: 11%;
+  transition: all 0.1s ease-in;
+}
+
+.active {
+  background-color: yellow;
+  transform: scale(1.1);
+}
+
+@media (min-width: 768px) {
+  .drum-pad {
+    width: 8%;
+    height: 5%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .drum-pad {
+    height: 10%;
+  }
+}
